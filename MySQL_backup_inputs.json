@@ -1,0 +1,11 @@
+{
+    "host": "127.0.0.1",
+    "username": "labadmin",
+    "password": "Digbio-MySQL-Root-2023",
+    "tables": [
+        "KBC_WorkshopDemo.WorkshopDemo_ProteinAnnotation_SK_SK",
+        "KBC_WorkshopDemo.WorkshopDemo_cDNASequence_D2_F2",
+        "KBC_WorkshopDemo.WorkshopDemo_Pfam"
+    ],
+    "output_folder": "/data/yenc/projects/SQLmireba/output/2024_03_20/"
+}

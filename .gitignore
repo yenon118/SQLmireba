@@ -1,0 +1,10 @@
+
+/data/
+
+/output/
+
+/.snakemake/
+
+slurm*
+log*
+*.out
