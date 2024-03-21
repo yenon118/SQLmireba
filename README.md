@@ -74,7 +74,7 @@ Create a Conda environment by specifying all required packages (option 1).
 Please make sure to replace the _<conda_environment_name>_ with an environment name of your choice.
 
 ```
-conda create -n <conda_environment_name> conda-forge::mysqlclient 
+conda create -n <conda_environment_name> conda-forge::mysqlclient \
 bioconda::snakemake bioconda::snakemake-executor-plugin-cluster-generic
 ```
 
