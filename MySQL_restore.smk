@@ -38,7 +38,7 @@ input_extension = ''
 for i in range(len(files)):
     if os.path.dirname(files[i]) != input_folder:
         input_folder = os.path.dirname(files[i])
-    possible_table = re.sub('\.[^\.]*$', '', str(os.path.basename(files[i])))
+    possible_table = re.sub('\\.[^\\.]*$', '', str(os.path.basename(files[i])))
     if not possible_table in tables:
         tables.append(possible_table)
     possible_extension = re.sub(possible_table,'',str(os.path.basename(files[i])))

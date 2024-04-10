@@ -6,8 +6,8 @@ rule mysql_restore:
         usr = username,
         pw = password,
         db_tbl = '{table}',
-        db = lambda w: re.sub("\..*", "", w.table),
-        tbl = lambda w: re.sub(".*\.", "", w.table),
+        db = lambda w: re.sub("\\..*", "", w.table),
+        tbl = lambda w: re.sub(".*\\.", "", w.table),
         out_dir = os.path.join(os.path.abspath(output_folder),'log')
     output:
         out_file = os.path.join(os.path.abspath(output_folder),'log','{table}.log'),
