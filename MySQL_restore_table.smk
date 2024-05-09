@@ -52,4 +52,4 @@ rule all:
     input:
         expand(os.path.join(os.path.abspath(output_folder),'log','{table}.log'), table=tables),
 
-include: './rules/MySQL/MySQL_restore.smk'
+include: './rules/MySQL/MySQL_restore_table.smk'

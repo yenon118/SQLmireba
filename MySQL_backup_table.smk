@@ -35,4 +35,4 @@ rule all:
     input:
         expand(os.path.join(os.path.abspath(output_folder),'{table}.sql'), table=tables),
 
-include: './rules/MySQL/MySQL_backup.smk'
+include: './rules/MySQL/MySQL_backup_table.smk'

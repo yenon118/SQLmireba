@@ -140,7 +140,7 @@ Please adjust _/path/to/_ to an actual directory absolute path.
 ```
 cd /path/to/SQLmireba
 
-snakemake -pj 3 --configfile MySQL_backup_inputs.json --snakefile MySQL_backup.smk
+snakemake -pj 3 --configfile MySQL_backup_table_inputs.json --snakefile MySQL_backup_table.smk
 ```
 
 **Examples of running with an executor.**
@@ -155,8 +155,8 @@ snakemake --executor cluster-generic \
 --nodes=1 --ntasks=1 --cpus-per-task=3 \
 --partition=Lewis,BioCompute,hpc5,General --mem=64G" \
 --jobs 25 --latency-wait 60 \
---configfile MySQL_backup_inputs.json \
---snakefile MySQL_backup.smk
+--configfile MySQL_backup_table_inputs.json \
+--snakefile MySQL_backup_table.smk
 ```
 
 Snakemake version < 8.0.0.
@@ -168,6 +168,6 @@ snakemake --cluster "sbatch --account=xulab --time=0-02:00 \
 --nodes=1 --ntasks=1 --cpus-per-task=3 \
 --partition=Lewis,BioCompute,hpc5,General --mem=64G" \
 --jobs 25 --latency-wait 60 \
---configfile MySQL_backup_inputs.json \
---snakefile MySQL_backup.smk
+--configfile MySQL_backup_table_inputs.json \
+--snakefile MySQL_backup_table.smk
 ```

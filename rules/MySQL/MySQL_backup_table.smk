@@ -21,7 +21,7 @@ rule mysql_backup:
 
         current_dir=$(pwd);
 
-        mysqldump -h "{params.host}" --user="{params.usr}" --password="{params.pw}" --add-drop-table --result-file "{output.out_file}" "{params.db}" "{params.tbl}" > {log};
+        mysqldump -h "{params.host}" --user="{params.usr}" --password="{params.pw}" --add-drop-table --routines --result-file "{output.out_file}" "{params.db}" "{params.tbl}" > {log};
 
         cd {params.out_dir};
         md5sum {params.db_tbl}.sql > {params.db_tbl}.sql.md5;
