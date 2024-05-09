@@ -1,0 +1,11 @@
+{
+    "host": "127.0.0.1",
+    "username": "labadmin",
+    "password": "Digbio-MySQL-Root-2023",
+    "files": [
+        "/data/yenc/projects/SQLmireba/output/2024_03_22/Temp_auxin_wordpress.sql",
+        "/data/yenc/projects/SQLmireba/output/2024_03_22/Temp_kb_test.sql",
+        "/data/yenc/projects/SQLmireba/output/2024_03_22/Temp_KBC_Mtruncatula.sql"
+    ],
+    "output_folder": "/data/yenc/projects/SQLmireba/output/2024_03_22/"
+}

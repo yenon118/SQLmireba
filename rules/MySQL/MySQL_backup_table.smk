@@ -1,4 +1,4 @@
-rule mysql_backup:
+rule mysql_backup_table:
     params:
         host = host,
         usr = username,

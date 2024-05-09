@@ -1,17 +1,15 @@
-rule mysql_restore_table:
+rule mysql_restore_database:
     input:
-        in_file = os.path.join(os.path.abspath(input_folder),'{table}'+input_extension),
+        in_file = os.path.join(os.path.abspath(input_folder),'{database}'+input_extension),
     params:
         host = host,
         usr = username,
         pw = password,
-        db_tbl = '{table}',
-        db = lambda w: re.sub("\\..*", "", w.table),
-        tbl = lambda w: re.sub(".*\\.", "", w.table),
+        db = '{database}',
         out_dir = os.path.join(os.path.abspath(output_folder),'log')
     output:
-        out_file = os.path.join(os.path.abspath(output_folder),'log','{table}.log'),
-        out_tmp_dir = temp(directory(os.path.join(os.path.abspath(output_folder),'tmp','{table}')))
+        out_file = os.path.join(os.path.abspath(output_folder),'log','{database}.log'),
+        out_tmp_dir = temp(directory(os.path.join(os.path.abspath(output_folder),'tmp','{database}')))
     shell:
         """
         mkdir -p {params.out_dir};
