@@ -12,8 +12,9 @@ In order to run the SQLmireba pipeline, users need to install Miniconda and prep
 The required software, programming languages, and packages include:
 
 ```
-mysqlclient>=2.2
-snakemake>=8.4
+mysql>=8.3.0
+mysqlclient>=2.2.4
+snakemake>=8.20.3
 ```
 
 Miniconda can be downloaded from [https://docs.anaconda.com/free/miniconda/](https://docs.anaconda.com/free/miniconda/).
@@ -74,7 +75,8 @@ Create a Conda environment by specifying all required packages (option 1).
 Please make sure to replace the _<conda_environment_name>_ with an environment name of your choice.
 
 ```
-conda create -n <conda_environment_name> conda-forge::mysqlclient \
+conda create -n <conda_environment_name> \
+conda-forge::mysql conda-forge::mysqlclient \
 bioconda::snakemake bioconda::snakemake-executor-plugin-cluster-generic
 ```
 
